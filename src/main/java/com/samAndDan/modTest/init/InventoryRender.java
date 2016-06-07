@@ -1,4 +1,4 @@
-package com.samAndDan.modTest.item;
+package com.samAndDan.modTest.init;
 
 import com.samAndDan.modTest.utils.StringUtils;
 import net.minecraft.block.Block;
@@ -9,6 +9,10 @@ import net.minecraft.item.Item;
 public class InventoryRender {
 
     public static void initInventoryRender() {
+
+        InventoryItemRender(ModItems.ruby);
+
+        InventoryBlockRender(ModBlocks.rubyOre);
 
     }
 

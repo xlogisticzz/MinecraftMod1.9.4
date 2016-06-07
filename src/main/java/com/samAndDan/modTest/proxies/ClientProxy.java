@@ -1,6 +1,6 @@
 package com.samAndDan.modTest.proxies;
 
-import com.samAndDan.modTest.item.InventoryRender;
+import com.samAndDan.modTest.init.InventoryRender;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
