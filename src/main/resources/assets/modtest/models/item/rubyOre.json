@@ -1,5 +1,5 @@
 {
-  "parent": "learningmodding:block/rubyOre",
+  "parent": "modtest:block/rubyOre",
   "display": {
     "thirdperson": {
       "rotation": [

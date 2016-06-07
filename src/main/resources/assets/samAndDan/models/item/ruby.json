@@ -1,6 +1,0 @@
-{
-  "parent": "learningmodding:item/LM_item",
-  "textures": {
-    "layer0": "learningmodding:items/ruby"
-  }
-}
