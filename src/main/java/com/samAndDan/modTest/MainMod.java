@@ -6,6 +6,7 @@ import com.samAndDan.modTest.init.Recipes;
 import com.samAndDan.modTest.lib.Strings;
 import com.samAndDan.modTest.proxies.CommonProxy;
 import com.samAndDan.modTest.utils.LogHelper;
+import com.samAndDan.modTest.world.WorldGenerationHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -33,6 +34,8 @@ public class MainMod {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         proxy.init(event);
+
+        new WorldGenerationHandler();
 
     }
 

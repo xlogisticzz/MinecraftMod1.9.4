@@ -31,7 +31,7 @@ public class BlockModOre extends ModBlock {
     @Override
     public int quantityDropped(IBlockState state, int fortune, Random random) {
         if (this == ModBlocks.rubyOre) {
-            return 2 + random.nextInt(3);
+            return 2 + random.nextInt(fortune);
         }
         return super.quantityDropped(state, fortune, random);
     }
