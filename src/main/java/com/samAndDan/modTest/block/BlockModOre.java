@@ -1,10 +1,11 @@
 package com.samAndDan.modTest.block;
 
 
-import com.samAndDan.modTest.ModCreativeTab;
 import com.samAndDan.modTest.init.ModBlocks;
 import com.samAndDan.modTest.init.ModItems;
+import com.samAndDan.modTest.lib.Strings;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 
@@ -13,12 +14,14 @@ import java.util.Random;
 public class BlockModOre extends ModBlock {
 
     public BlockModOre(String name, float hardness, float resistance) {
-        setCreativeTab(ModCreativeTab.tabMod);
+        super(Material.ROCK);
         setHardness(hardness);
         setResistance(resistance);
         setSoundType(SoundType.STONE);
         setUnlocalizedName(name);
+        setRegistryName(Strings.MODID, name);
     }
+
 
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {

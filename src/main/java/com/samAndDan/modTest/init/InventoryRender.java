@@ -13,6 +13,7 @@ public class InventoryRender {
         InventoryItemRender(ModItems.ruby);
 
         InventoryBlockRender(ModBlocks.rubyOre);
+        InventoryBlockRender(ModBlocks.rubyBlock);
 
     }
 

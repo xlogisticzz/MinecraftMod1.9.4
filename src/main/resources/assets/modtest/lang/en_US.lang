@@ -5,6 +5,7 @@ item.modtest:ruby.name=Ruby
 
 
 tile.modtest:rubyOre.name=Ruby Ore
+tile.modtest:rubyBlock.name=Ruby Block
 
 
 

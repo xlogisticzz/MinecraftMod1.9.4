@@ -15,6 +15,8 @@ public class Strings {
 
     //Block Names
     public static final String RUBYORE = "rubyOre";
+    public static final String RUBYBLOCK = "rubyBlock";
+
 
 
 }
