@@ -11,11 +11,14 @@ public class Strings {
 
     //Item Names
     public static final String RUBY = "ruby";
+    public static final String TITANIUMINGOT = "titaniumIngot";
 
 
     //Block Names
     public static final String RUBYORE = "rubyOre";
+    public static final String TITANIUMORE = "titaniumOre";
     public static final String RUBYBLOCK = "rubyBlock";
+    public static final String TITANIUMBLOCK = "titaniumBlock";
 
 
 

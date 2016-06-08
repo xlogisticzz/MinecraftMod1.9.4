@@ -11,9 +11,12 @@ public class InventoryRender {
     public static void initInventoryRender() {
 
         InventoryItemRender(ModItems.ruby);
+        InventoryItemRender(ModItems.titaniumIngot);
 
         InventoryBlockRender(ModBlocks.rubyOre);
+        InventoryBlockRender(ModBlocks.titaniumOre);
         InventoryBlockRender(ModBlocks.rubyBlock);
+        InventoryBlockRender(ModBlocks.titaniumBlock);
 
     }
 

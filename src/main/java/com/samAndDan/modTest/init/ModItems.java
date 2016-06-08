@@ -8,14 +8,17 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModItems {
 
     public static ModItem ruby;
+    public static ModItem titaniumIngot;
+
 
 
     public static void createItems() {
         ruby = new ItemBasicItem(Strings.RUBY);
+        titaniumIngot = new ItemBasicItem(Strings.TITANIUMINGOT);
 
 
-        GameRegistry.registerItem(ruby, Strings.RUBY);
-        //  GameRegistry.register(ruby, new ResourceLocation(Strings.MODID,Strings.RUBY ));
+        GameRegistry.register(ruby);
+        GameRegistry.register(titaniumIngot);
 
     }
 

@@ -16,11 +16,13 @@ import java.util.Random;
 public class WorldGenerationHandler implements IWorldGenerator {
 
     private WorldGenerator rubyGen;
+    private WorldGenerator titaniumGen;
 
     public WorldGenerationHandler() {
 
         GameRegistry.registerWorldGenerator(this, 3);
         rubyGen = new WorldGenMinable(ModBlocks.rubyOre.getDefaultState(), Values.RUBY_WORLD_GEN_AMOUNT);
+        titaniumGen = new WorldGenMinable(ModBlocks.titaniumOre.getDefaultState(), Values.TITANIUM_WORLD_GEN_AMOUNT);
     }
 
     public void generateStandardOre(Random rand, int chunkX, int chunkZ, World world, int iterations, WorldGenerator gen, int lowestY, int highestY) {
@@ -49,6 +51,7 @@ public class WorldGenerationHandler implements IWorldGenerator {
     private void generateOverworld(World world, Random random, int chunkX, int chunkZ) {
 
         generateStandardOre(random, chunkX, chunkZ, world, Values.RUBY_WORLD_GEN_ITERATIONS, this.rubyGen, Values.RUBY_WORLD_GEN_LOWESTY, Values.RUBY_WORLD_GEN_HIGHESTY);
+        generateStandardOre(random, chunkX, chunkZ, world, Values.TITANIUM_WORLD_GEN_ITERATIONS, this.titaniumGen, Values.TITANIUM_WORLD_GEN_LOWESTY, Values.TITANIUM_WORLD_GEN_HIGHESTY);
 
     }
 
