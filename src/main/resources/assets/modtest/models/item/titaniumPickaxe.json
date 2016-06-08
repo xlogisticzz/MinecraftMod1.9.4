@@ -1,6 +1,6 @@
 {
   "parent": "modtest:item/TM_tool",
   "textures": {
-    "layer0": "modtest:items/titaniumAxe"
+    "layer0": "modtest:items/titaniumPickaxe"
   }
 }

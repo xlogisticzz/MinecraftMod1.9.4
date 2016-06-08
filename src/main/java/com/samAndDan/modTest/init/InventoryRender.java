@@ -16,6 +16,10 @@ public class InventoryRender {
         InventoryItemRender(ModItems.titaniumAxe);
         InventoryItemRender(ModItems.rubySword);
         InventoryItemRender(ModItems.titaniumSword);
+        InventoryItemRender(ModItems.rubyHoe);
+        InventoryItemRender(ModItems.titaniumHoe);
+        InventoryItemRender(ModItems.rubyPick);
+        InventoryItemRender(ModItems.titaniumPick);
 
         InventoryBlockRender(ModBlocks.rubyOre);
         InventoryBlockRender(ModBlocks.titaniumOre);
