@@ -1,0 +1,6 @@
+{
+  "parent": "modtest:item/TM_item",
+  "textures": {
+    "layer0": "modtest:items/copperIngot"
+  }
+}

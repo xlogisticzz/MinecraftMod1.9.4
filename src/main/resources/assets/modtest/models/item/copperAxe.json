@@ -1,0 +1,6 @@
+{
+  "parent": "modtest:item/TM_tool",
+  "textures": {
+    "layer0": "modtest:items/copperAxe"
+  }
+}
