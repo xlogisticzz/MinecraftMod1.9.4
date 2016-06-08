@@ -1,11 +1,21 @@
 itemGroup.tabMod=Test Mod
 
 item.modtest:ruby.name=Ruby
-
-
+item.modtest:titaniumIngot.name=Titanium Ingot
 
 tile.modtest:rubyOre.name=Ruby Ore
 tile.modtest:rubyBlock.name=Ruby Block
+tile.modtest:rubyBlock.name=Ruby Block
+tile.modtest:titaniumBlock.name=Titanium Block
 
+item.modtest:titaniumSword.name=Titanium Sword
+item.modtest:titaniumPickaxe.name=Titanium Pickaxe
+item.modtest:titaniumSpade.name=Titanium Shovel
+item.modtest:titaniumAxe.name=Titanium Axe
+item.modtest:titaniumHoe.name=Titanium Hoe
 
-
+item.modtest:rubySword.name=Ruby Sword
+item.modtest:rubyPickaxe.name=Ruby Pickaxe
+item.modtest:rubySpade.name=Ruby Shovel
+item.modtest:rubyAxe.name=Ruby Axe
+item.modtest:rubyHoe.name=Ruby Hoe

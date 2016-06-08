@@ -12,6 +12,10 @@ public class InventoryRender {
 
         InventoryItemRender(ModItems.ruby);
         InventoryItemRender(ModItems.titaniumIngot);
+        InventoryItemRender(ModItems.rubyAxe);
+        InventoryItemRender(ModItems.titaniumAxe);
+        InventoryItemRender(ModItems.rubySword);
+        InventoryItemRender(ModItems.titaniumSword);
 
         InventoryBlockRender(ModBlocks.rubyOre);
         InventoryBlockRender(ModBlocks.titaniumOre);
@@ -27,7 +31,7 @@ public class InventoryRender {
 
     public static void RegisterToModelBakery(Item item, int maxMeta) {
         for (int i = 0; i <= maxMeta; i++) {
-            // ModelBakery.addVariantName(item, StringUtils.getUnwrappedUnlocalizedName(item.getUnlocalizedName()) + i);
+            //ModelBakery.addVariantName(item, StringUtils.getUnwrappedUnlocalizedName(item.getUnlocalizedName()) + i);
         }
     }
 

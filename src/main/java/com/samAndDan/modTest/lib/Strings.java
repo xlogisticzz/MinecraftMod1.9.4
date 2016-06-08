@@ -2,7 +2,7 @@ package com.samAndDan.modTest.lib;
 
 public class Strings {
 
-    public static final String MODID = "modTest";
+    public static final String MODID = "modtest";
     public static final String NAME = "modTest Test";
     public static final String VERSION = "1.9.4-1.0.0";
     public static final String CLIENTPROXY = "com.samAndDan.modTest.proxies.ClientProxy";
@@ -12,6 +12,16 @@ public class Strings {
     //Item Names
     public static final String RUBY = "ruby";
     public static final String TITANIUMINGOT = "titaniumIngot";
+    public static final String RUBYSWORD = "rubySword";
+    public static final String RUBYPICKAXE = "rubyPickaxe";
+    public static final String RUBYSPADE = "rubySpade";
+    public static final String RUBYAXE = "rubyAxe";
+    public static final String RUBYHOE = "rubyHoe";
+    public static final String TITANIUMSWORD = "titaniumSword";
+    public static final String TITANIUMPICKAXE = "titaniumPickaxe";
+    public static final String TITANIUMSPADE = "titaniumSpade";
+    public static final String TITANIUMAXE = "titaniumAxe";
+    public static final String TITANIUMHOE = "titaniumHoe";
 
 
     //Block Names
