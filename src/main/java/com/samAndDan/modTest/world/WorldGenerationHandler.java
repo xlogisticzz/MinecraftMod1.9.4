@@ -43,7 +43,7 @@ public class WorldGenerationHandler implements IWorldGenerator {
         switch (world.provider.getDimension()) {
             case -1:
                 generateNether(world, random, chunkX, chunkZ);
-            case 0:
+            default:
                 generateOverworld(world, random, chunkX, chunkZ);
         }
     }
