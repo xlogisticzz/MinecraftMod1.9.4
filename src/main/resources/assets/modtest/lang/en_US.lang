@@ -7,6 +7,8 @@ tile.modtest:rubyOre.name=Ruby Ore
 tile.modtest:rubyBlock.name=Ruby Block
 tile.modtest:titaniumOre.name=Titanium Ore
 tile.modtest:titaniumBlock.name=Titanium Block
+tile.modtest:copperOre.name=Copper Ore
+tile.modtest:copperBlock.name=Copper Block
 
 item.modtest:titaniumSword.name=Titanium Sword
 item.modtest:titaniumPickaxe.name=Titanium Pickaxe

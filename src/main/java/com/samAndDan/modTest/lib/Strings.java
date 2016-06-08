@@ -27,9 +27,10 @@ public class Strings {
     //Block Names
     public static final String RUBYORE = "rubyOre";
     public static final String TITANIUMORE = "titaniumOre";
+    public static final String COPPERORE = "copperOre";
     public static final String RUBYBLOCK = "rubyBlock";
     public static final String TITANIUMBLOCK = "titaniumBlock";
-
+    public static final String COPPERBLOCK = "copperBlock";
 
 
 }

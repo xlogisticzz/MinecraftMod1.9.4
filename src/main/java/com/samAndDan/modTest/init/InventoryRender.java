@@ -25,9 +25,10 @@ public class InventoryRender {
 
         InventoryBlockRender(ModBlocks.rubyOre);
         InventoryBlockRender(ModBlocks.titaniumOre);
+        InventoryBlockRender(ModBlocks.copperOre);
         InventoryBlockRender(ModBlocks.rubyBlock);
         InventoryBlockRender(ModBlocks.titaniumBlock);
-
+        InventoryBlockRender(ModBlocks.copperBlock);
     }
 
 
