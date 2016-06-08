@@ -19,7 +19,8 @@ public class ModItems {
     public static ItemModHoe titaniumHoe;
     public static ItemModPick rubyPick;
     public static ItemModPick titaniumPick;
-
+    public static ItemModSpade rubySpade;
+    public static ItemModSpade titaniumSpade;
 
     public static Item.ToolMaterial materialRuby = EnumHelper.addToolMaterial("ruby", 3, Values.RUBY_DURABILITY, 5.5F, 7.5F, 40);
     public static Item.ToolMaterial materialTitanium = EnumHelper.addToolMaterial("titanium", 4, Values.TITANIUM_DURABILITY, 6.1F, 8.5F, 30);
@@ -35,6 +36,8 @@ public class ModItems {
         titaniumHoe = new ItemModHoe(materialTitanium, Strings.TITANIUMHOE);
         rubyPick = new ItemModPick(materialRuby, Strings.RUBYPICKAXE);
         titaniumPick = new ItemModPick(materialTitanium, Strings.TITANIUMPICKAXE);
+        rubySpade = new ItemModSpade(materialRuby, Strings.RUBYSPADE);
+        titaniumSpade = new ItemModSpade(materialTitanium, Strings.TITANIUMSPADE);
 
 
 
@@ -48,6 +51,8 @@ public class ModItems {
         GameRegistry.register(titaniumHoe);
         GameRegistry.register(rubyPick);
         GameRegistry.register(titaniumPick);
+        GameRegistry.register(rubySpade);
+        GameRegistry.register(titaniumSpade);
 
     }
 
