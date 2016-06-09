@@ -2,6 +2,7 @@ itemGroup.tabMod=Test Mod
 
 item.modtest:ruby.name=Ruby
 item.modtest:titaniumIngot.name=Titanium Ingot
+item.modtest:copperIngot.name=Copper Ingot
 
 tile.modtest:rubyOre.name=Ruby Ore
 tile.modtest:rubyBlock.name=Ruby Block
@@ -21,3 +22,9 @@ item.modtest:rubyPickaxe.name=Ruby Pickaxe
 item.modtest:rubySpade.name=Ruby Shovel
 item.modtest:rubyAxe.name=Ruby Axe
 item.modtest:rubyHoe.name=Ruby Hoe
+
+item.modtest:copperSword.name=Copper Sword
+item.modtest:copperPickaxe.name=Copper Pickaxe
+item.modtest:copperSpade.name=Copper Shovel
+item.modtest:copperAxe.name=Copper Axe
+item.modtest:copperHoe.name=Copper Hoe

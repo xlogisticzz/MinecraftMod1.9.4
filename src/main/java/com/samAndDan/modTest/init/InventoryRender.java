@@ -12,16 +12,22 @@ public class InventoryRender {
 
         InventoryItemRender(ModItems.ruby);
         InventoryItemRender(ModItems.titaniumIngot);
+        InventoryItemRender(ModItems.copperIngot);
         InventoryItemRender(ModItems.rubyAxe);
         InventoryItemRender(ModItems.titaniumAxe);
+        InventoryItemRender(ModItems.copperAxe);
         InventoryItemRender(ModItems.rubySword);
         InventoryItemRender(ModItems.titaniumSword);
+        InventoryItemRender(ModItems.copperSword);
         InventoryItemRender(ModItems.rubyHoe);
         InventoryItemRender(ModItems.titaniumHoe);
+        InventoryItemRender(ModItems.copperHoe);
         InventoryItemRender(ModItems.rubyPick);
         InventoryItemRender(ModItems.titaniumPick);
+        InventoryItemRender(ModItems.copperPick);
         InventoryItemRender(ModItems.rubySpade);
         InventoryItemRender(ModItems.titaniumSpade);
+        InventoryItemRender(ModItems.copperSpade);
 
         InventoryBlockRender(ModBlocks.rubyOre);
         InventoryBlockRender(ModBlocks.titaniumOre);

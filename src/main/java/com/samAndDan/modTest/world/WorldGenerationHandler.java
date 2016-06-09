@@ -17,12 +17,14 @@ public class WorldGenerationHandler implements IWorldGenerator {
 
     private WorldGenerator rubyGen;
     private WorldGenerator titaniumGen;
+    private WorldGenerator copperGen;
 
     public WorldGenerationHandler() {
 
         GameRegistry.registerWorldGenerator(this, 3);
         rubyGen = new WorldGenMinable(ModBlocks.rubyOre.getDefaultState(), Values.RUBY_WORLD_GEN_AMOUNT);
         titaniumGen = new WorldGenMinable(ModBlocks.titaniumOre.getDefaultState(), Values.TITANIUM_WORLD_GEN_AMOUNT);
+        copperGen = new WorldGenMinable(ModBlocks.copperOre.getDefaultState(), Values.COPPER_WORLD_GEN_AMOUNT);
     }
 
     public void generateStandardOre(Random rand, int chunkX, int chunkZ, World world, int iterations, WorldGenerator gen, int lowestY, int highestY) {
@@ -52,6 +54,7 @@ public class WorldGenerationHandler implements IWorldGenerator {
 
         generateStandardOre(random, chunkX, chunkZ, world, Values.RUBY_WORLD_GEN_ITERATIONS, this.rubyGen, Values.RUBY_WORLD_GEN_LOWESTY, Values.RUBY_WORLD_GEN_HIGHESTY);
         generateStandardOre(random, chunkX, chunkZ, world, Values.TITANIUM_WORLD_GEN_ITERATIONS, this.titaniumGen, Values.TITANIUM_WORLD_GEN_LOWESTY, Values.TITANIUM_WORLD_GEN_HIGHESTY);
+        generateStandardOre(random, chunkX, chunkZ, world, Values.COPPER_WORLD_GEN_ITERATIONS, this.copperGen, Values.COPPER_WORLD_GEN_LOWESTY, Values.COPPER_WORLD_GEN_HIGHESTY);
 
     }
 

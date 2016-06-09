@@ -12,6 +12,7 @@ public class Strings {
     //Item Names
     public static final String RUBY = "ruby";
     public static final String TITANIUMINGOT = "titaniumIngot";
+    public static final String COPPERINGOT = "copperIngot";
     public static final String RUBYSWORD = "rubySword";
     public static final String RUBYPICKAXE = "rubyPickaxe";
     public static final String RUBYSPADE = "rubySpade";
@@ -22,6 +23,11 @@ public class Strings {
     public static final String TITANIUMSPADE = "titaniumSpade";
     public static final String TITANIUMAXE = "titaniumAxe";
     public static final String TITANIUMHOE = "titaniumHoe";
+    public static final String COPPERSWORD = "copperSword";
+    public static final String COPPERPICKAXE = "copperPickaxe";
+    public static final String COPPERSPADE = "copperSpade";
+    public static final String COPPERAXE = "copperAxe";
+    public static final String COPPERHOE = "copperHoe";
 
 
     //Block Names
