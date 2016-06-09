@@ -5,6 +5,7 @@ import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraftforge.client.model.ModelLoader;
 
 public class InventoryRender {
 
@@ -51,7 +52,6 @@ public class InventoryRender {
     }
 
     public static void InventoryBlockRender(Block block) {
-
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(StringUtils.getUnwrappedUnlocalizedName(block.getUnlocalizedName()), "inventory"));
     }
 
@@ -62,7 +62,7 @@ public class InventoryRender {
 
     public static void InventoryItemRenderWithMeta(Item item, int maxMeta) {
         for (int i = 0; i <= maxMeta; i++) {
-            Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, i, new ModelResourceLocation(StringUtils.getUnwrappedUnlocalizedName(item.getUnlocalizedName()) + i, "inventory"));
+            ModelLoader.setCustomModelResourceLocation(item, i, new ModelResourceLocation(StringUtils.getUnwrappedUnlocalizedName(item.getUnlocalizedName()) + i, "inventory"));
         }
     }
 

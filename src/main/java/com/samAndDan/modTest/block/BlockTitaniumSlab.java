@@ -36,6 +36,7 @@ public abstract class BlockTitaniumSlab extends BlockSlab {
         this.setDefaultState(iblockstate.withProperty(VARIANT, BlockTitaniumSlab.Variant.DEFAULT));
     }
 
+
     /**
      * Get the Item that this Block should drop when harvested.
      */
@@ -47,6 +48,7 @@ public abstract class BlockTitaniumSlab extends BlockSlab {
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
         return new ItemStack(ModBlocks.titaniumSlab);
     }
+
 
     /**
      * Convert the given metadata into a BlockState for this Block
