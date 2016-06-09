@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {"model": "modtest:titaniumBlockSlab"},
+    "half=top,variant=default": {"model": "modtest:titaniumBlockSlabUpper"}
+  }
+}

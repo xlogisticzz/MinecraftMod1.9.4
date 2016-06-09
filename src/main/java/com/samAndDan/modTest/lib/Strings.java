@@ -37,6 +37,9 @@ public class Strings {
     public static final String RUBYBLOCK = "rubyBlock";
     public static final String TITANIUMBLOCK = "titaniumBlock";
     public static final String COPPERBLOCK = "copperBlock";
+    public static final String TITANIUMSLAB = "titaniumBlockSlab";
+    public static final String TITANIUMSLABUPPER = "titaniumBlockDoubleSlab";
+
 
 
 }

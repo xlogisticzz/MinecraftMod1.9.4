@@ -1,9 +1,13 @@
 package com.samAndDan.modTest.init;
 
+import com.samAndDan.modTest.ModCreativeTab;
 import com.samAndDan.modTest.block.BlockBasicBlock;
 import com.samAndDan.modTest.block.BlockModOre;
+import com.samAndDan.modTest.block.BlockTitaniumSlab;
 import com.samAndDan.modTest.block.ModBlock;
 import com.samAndDan.modTest.lib.Strings;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -16,6 +20,9 @@ public class ModBlocks {
     public static ModBlock rubyBlock;
     public static ModBlock titaniumBlock;
     public static ModBlock copperBlock;
+    public static BlockSlab titaniumSlab;
+    public static BlockSlab titaniumDoubleSlab;
+
 
 
     public static void createBlocks() {
@@ -25,16 +32,22 @@ public class ModBlocks {
         rubyBlock = new BlockBasicBlock(Material.IRON, Strings.RUBYBLOCK, 3F, 5F);
         titaniumBlock = new BlockBasicBlock(Material.IRON, Strings.TITANIUMBLOCK, 5F, 7F);
         copperBlock = new BlockBasicBlock(Material.IRON, Strings.COPPERBLOCK, 2F, 5F);
+
+        titaniumSlab = (BlockSlab) (new BlockTitaniumSlab.Half()).setHardness(2.0F).setResistance(10.0F).setUnlocalizedName(Strings.TITANIUMSLAB).setRegistryName(Strings.MODID, Strings.TITANIUMSLAB).setCreativeTab(ModCreativeTab.tabMod);
+        titaniumDoubleSlab = (BlockSlab) (new BlockTitaniumSlab.Double()).setHardness(2.0F).setResistance(10.0F).setUnlocalizedName(Strings.TITANIUMSLABUPPER).setRegistryName(Strings.MODID, Strings.TITANIUMSLABUPPER);
+
         registerBlock(rubyOre);
         registerBlock(titaniumOre);
         registerBlock(copperOre);
         registerBlock(rubyBlock);
         registerBlock(titaniumBlock);
         registerBlock(copperBlock);
+        registerBlock(titaniumSlab);
+        registerBlock(titaniumDoubleSlab);
 
     }
 
-    private static void registerBlock(ModBlock block) {
+    private static void registerBlock(Block block) {
         GameRegistry.register(block);
         GameRegistry.register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
 
