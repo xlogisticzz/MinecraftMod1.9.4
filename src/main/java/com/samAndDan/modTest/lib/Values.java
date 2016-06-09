@@ -2,8 +2,14 @@ package com.samAndDan.modTest.lib;
 
 public class Values {
 
-    public static final int RUBY_DURABILITY = 1000;
-    public static final float RUBY_SPEED = -2.5F;
+    public static final int RUBY_DURABILITY_MIN = 100;
+    public static final int RUBY_DURABILITY_DEFAULT = 1000;
+    public static final int RUBY_DURABILITY_MAX = 10000;
+    public static final float RUBY_SPEED_MIN = 0.0F;
+    public static final float RUBY_SPEED_DEFAUlT = -2.5F;
+    public static final float RUBY_SPEED_MAX = -20.0F;
+
+
     public static final int TITANIUM_DURABILITY = 800;
     public static final float TITANIUM_SPEED = -2.8F;
     public static final int COPPER_DURABILITY = 400;

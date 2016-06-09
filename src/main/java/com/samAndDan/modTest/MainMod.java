@@ -1,5 +1,6 @@
 package com.samAndDan.modTest;
 
+import com.samAndDan.modTest.config.ModConfiguration;
 import com.samAndDan.modTest.init.ModBlocks;
 import com.samAndDan.modTest.init.ModItems;
 import com.samAndDan.modTest.init.Recipes;
@@ -13,7 +14,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(name = Strings.NAME, modid = Strings.MODID, version = Strings.VERSION)
+@Mod(name = Strings.NAME, modid = Strings.MODID, version = Strings.VERSION, guiFactory = Strings.GUIFACTORY)
 public class MainMod {
 
     @Mod.Instance(Strings.MODID)
@@ -24,11 +25,13 @@ public class MainMod {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        ModConfiguration.preInit();
+        proxy.preInit(event);
         ModItems.createItems();
         ModBlocks.createBlocks();
-        proxy.preInit(event);
         Recipes.initOreDictonary();
         Recipes.initVanilla();
+
 
     }
 
@@ -43,7 +46,7 @@ public class MainMod {
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
         proxy.postInit(event);
-        LogHelper.info("Learning Modding loaded");
+        LogHelper.info("Test Mod loaded");
 
     }
 }

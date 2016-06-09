@@ -1,5 +1,6 @@
 package com.samAndDan.modTest.init;
 
+import com.samAndDan.modTest.config.ModConfiguration;
 import com.samAndDan.modTest.item.*;
 import com.samAndDan.modTest.lib.Strings;
 import com.samAndDan.modTest.lib.Values;
@@ -28,7 +29,7 @@ public class ModItems {
     public static ItemModSpade titaniumSpade;
     public static ItemModSpade copperSpade;
 
-    public static Item.ToolMaterial materialRuby = EnumHelper.addToolMaterial("ruby", 3, Values.RUBY_DURABILITY, 5.5F, 7.5F, 40);
+    public static Item.ToolMaterial materialRuby = EnumHelper.addToolMaterial("ruby", 3, ModConfiguration.rubyDurability, 5.5F, 7.5F, 40);
     public static Item.ToolMaterial materialTitanium = EnumHelper.addToolMaterial("titanium", 4, Values.TITANIUM_DURABILITY, 6.1F, 8.5F, 30);
     public static Item.ToolMaterial materialCopper = EnumHelper.addToolMaterial("copper", 3, Values.COPPER_DURABILITY, 3F, 5F, 30);
 
@@ -36,7 +37,7 @@ public class ModItems {
         ruby = new ItemBasicItem(Strings.RUBY);
         titaniumIngot = new ItemBasicItem(Strings.TITANIUMINGOT);
         copperIngot = new ItemBasicItem(Strings.COPPERINGOT);
-        rubyAxe = new ItemModAxe(materialRuby, Strings.RUBYAXE, Values.RUBY_SPEED);
+        rubyAxe = new ItemModAxe(materialRuby, Strings.RUBYAXE, ModConfiguration.rubySpeed);
         titaniumAxe = new ItemModAxe(materialTitanium, Strings.TITANIUMAXE, Values.TITANIUM_SPEED);
         copperAxe = new ItemModAxe(materialCopper, Strings.COPPERAXE, Values.COPPER_SPEED);
         rubySword = new ItemModSword(materialRuby, Strings.RUBYSWORD);

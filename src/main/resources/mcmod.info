@@ -1,14 +1,14 @@
 [
 {
-  "modid": "learningmodding",
-  "name": "Example Mod",
+  "modid": "modtest",
+  "name": "Test Mod",
   "description": "Example placeholder mod.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["JuiceBox", "WildSam"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

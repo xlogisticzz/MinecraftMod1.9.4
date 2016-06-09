@@ -1,5 +1,6 @@
 package com.samAndDan.modTest.proxies;
 
+import com.samAndDan.modTest.config.ModConfiguration;
 import com.samAndDan.modTest.init.InventoryRender;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -9,6 +10,7 @@ public class ClientProxy extends CommonProxy {
 
     @Override
     public void preInit(FMLPreInitializationEvent event) {
+        ModConfiguration.clientPreInit();
         InventoryRender.initModelBakery();
     }
 
