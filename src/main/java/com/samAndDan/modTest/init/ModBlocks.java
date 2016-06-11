@@ -10,6 +10,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemSlab;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
@@ -42,14 +43,21 @@ public class ModBlocks {
         registerBlock(rubyBlock);
         registerBlock(titaniumBlock);
         registerBlock(copperBlock);
-        registerBlock(titaniumSlab);
+        registerBlockWithItem(titaniumSlab, new ItemSlab(titaniumSlab, titaniumSlab, titaniumDoubleSlab));
         registerBlock(titaniumDoubleSlab);
+
 
     }
 
     private static void registerBlock(Block block) {
         GameRegistry.register(block);
         GameRegistry.register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
+
+    }
+
+    private static void registerBlockWithItem(Block block, ItemBlock itemBlock) {
+        GameRegistry.register(block);
+        GameRegistry.register(itemBlock.setRegistryName(block.getRegistryName()));
 
     }
 
