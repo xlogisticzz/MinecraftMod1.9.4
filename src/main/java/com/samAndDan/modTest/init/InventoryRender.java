@@ -52,7 +52,9 @@ public class InventoryRender {
         InventoryBlockRender(ModBlocks.tinBlock);
         //slabs
         InventoryBlockRender(ModBlocks.titaniumSlab);
-        InventoryBlockRender(ModBlocks.titaniumDoubleSlab);
+        InventoryBlockRender(ModBlocks.copperSlab);
+        InventoryBlockRender(ModBlocks.tinSlab);
+        InventoryBlockRender(ModBlocks.rubySlab);
     }
 
 

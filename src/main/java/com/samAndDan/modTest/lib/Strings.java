@@ -49,6 +49,12 @@ public class Strings {
     public static final String TINBLOCK = "tinBlock";
     public static final String TITANIUMSLAB = "titaniumBlockSlab";
     public static final String TITANIUMSLABUPPER = "titaniumBlockDoubleSlab";
+    public static final String COPPERSLAB = "copperBlockSlab";
+    public static final String COPPERSLABUPPER = "copperBlockDoubleSlab";
+    public static final String TINSLAB = "tinBlockSlab";
+    public static final String TINSLABUPPER = "tinBlockDoubleSlab";
+    public static final String RUBYSLAB = "rubyBlockSlab";
+    public static final String RUBYSLABUPPER = "rubyBlockDoubleSlab";
 
 
 

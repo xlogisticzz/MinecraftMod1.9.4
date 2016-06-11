@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {"model": "modtest:copperBlockSlab"},
+    "half=top,variant=default": {"model": "modtest:copperBlockSlabUpper"}
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {"model": "modtest:rubyBlockSlab"},
+    "half=top,variant=default": {"model": "modtest:rubyBlockSlabUpper"}
+  }
+}

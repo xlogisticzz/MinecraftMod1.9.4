@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {"model": "modtest:tinBlockSlab"},
+    "half=top,variant=default": {"model": "modtest:tinBlockSlabUpper"}
+  }
+}

@@ -16,8 +16,11 @@ tile.modtest:titaniumBlock.name=Titanium Block
 tile.modtest:titaniumBlockSlab.name=Titanium Slab
 tile.modtest:copperOre.name=Copper Ore
 tile.modtest:copperBlock.name=Copper Block
+tile.modtest:copperBlockSlab.name=Copper Slab
 tile.modtest:tinOre.name=Tin Ore
 tile.modtest:tinBlock.name=Tin Block
+tile.modtest:tinBlockSlab.name=Tin Slab
+tile.modtest:rubyBlockSlab.name=Ruby Slab
 
 item.modtest:titaniumSword.name=Titanium Sword
 item.modtest:titaniumPickaxe.name=Titanium Pickaxe
