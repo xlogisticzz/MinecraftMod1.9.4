@@ -29,7 +29,7 @@ public class MainMod {
         proxy.preInit(event);
         ModItems.createItems();
         ModBlocks.createBlocks();
-        Recipes.initOreDictonary();
+        Recipes.initOreDictionary();
         Recipes.initVanilla();
 
 

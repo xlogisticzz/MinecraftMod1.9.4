@@ -10,6 +10,7 @@ gui.modtest.material.tooltip=Material Config options
 item.modtest:ruby.name=Ruby
 item.modtest:titaniumIngot.name=Titanium Ingot
 item.modtest:copperIngot.name=Copper Ingot
+item.modtest:tinIngot.name=Tin Ingot
 
 tile.modtest:rubyOre.name=Ruby Ore
 tile.modtest:rubyBlock.name=Ruby Block
@@ -18,6 +19,8 @@ tile.modtest:titaniumBlock.name=Titanium Block
 tile.modtest:titaniumBlockSlab.name=Titanium Slab
 tile.modtest:copperOre.name=Copper Ore
 tile.modtest:copperBlock.name=Copper Block
+tile.modtest:tinOre.name=Tin Ore
+tile.modtest:tinBlock.name=Tin Block
 
 item.modtest:titaniumSword.name=Titanium Sword
 item.modtest:titaniumPickaxe.name=Titanium Pickaxe
@@ -36,3 +39,9 @@ item.modtest:copperPickaxe.name=Copper Pickaxe
 item.modtest:copperSpade.name=Copper Shovel
 item.modtest:copperAxe.name=Copper Axe
 item.modtest:copperHoe.name=Copper Hoe
+
+item.modtest:tinSword.name=Tin Sword
+item.modtest:tinPickaxe.name=Tin Pickaxe
+item.modtest:tinSpade.name=Tin Shovel
+item.modtest:tinAxe.name=Tin Axe
+item.modtest:tinHoe.name=Tin Hoe

@@ -11,9 +11,11 @@ public class Strings {
 
 
     //Item Names
+
     public static final String RUBY = "ruby";
     public static final String TITANIUMINGOT = "titaniumIngot";
     public static final String COPPERINGOT = "copperIngot";
+    public static final String TININGOT = "tinIngot";
     public static final String RUBYSWORD = "rubySword";
     public static final String RUBYPICKAXE = "rubyPickaxe";
     public static final String RUBYSPADE = "rubySpade";
@@ -29,15 +31,22 @@ public class Strings {
     public static final String COPPERSPADE = "copperSpade";
     public static final String COPPERAXE = "copperAxe";
     public static final String COPPERHOE = "copperHoe";
+    public static final String TINSWORD = "tinSword";
+    public static final String TINPICKAXE = "tinPickaxe";
+    public static final String TINSPADE = "tinSpade";
+    public static final String TINAXE = "tinAxe";
+    public static final String TINHOE = "tinHoe";
 
 
     //Block Names
     public static final String RUBYORE = "rubyOre";
     public static final String TITANIUMORE = "titaniumOre";
     public static final String COPPERORE = "copperOre";
+    public static final String TINORE = "tinOre";
     public static final String RUBYBLOCK = "rubyBlock";
     public static final String TITANIUMBLOCK = "titaniumBlock";
     public static final String COPPERBLOCK = "copperBlock";
+    public static final String TINBLOCK = "tinBlock";
     public static final String TITANIUMSLAB = "titaniumBlockSlab";
     public static final String TITANIUMSLABUPPER = "titaniumBlockDoubleSlab";
 
