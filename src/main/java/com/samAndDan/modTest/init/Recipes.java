@@ -36,9 +36,9 @@ public class Recipes {
         GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.titaniumPick, "TTT", " S ", " S ", 'T', "ingotTitanium", 'S', "stickWood"));
         GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.titaniumSpade, " T ", " S ", " S ", 'T', "ingotTitanium", 'S', "stickWood"));
         GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.titaniumSword, " T ", " T ", " S ", 'T', "ingotTitanium", 'S', "stickWood"));
-        GameRegistry.addRecipe(new ItemStack(ModBlocks.titaniumSlab, 3), "TTT", "   ", "   ", 'T', "blockTitanium");
-        GameRegistry.addRecipe(new ItemStack(ModBlocks.titaniumSlab, 3), "   ", "TTT", "   ", 'T', "blockTitianium");
-        GameRegistry.addRecipe(new ItemStack(ModBlocks.titaniumSlab, 3), "   ", "   ", "TTT",  'T', "blockTitanium");
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.titaniumSlab, 3), "TTT", "   ", "   ", 'T', "blockTitanium"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.titaniumSlab, 3), "   ", "TTT", "   ", 'T', "blockTitanium"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.titaniumSlab, 3), "   ", "   ", "TTT",  'T', "blockTitanium"));
 
         GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.copperAxe, "CC ", "CS ", " S ", 'C', "ingotCopper", 'S', "stickWood"));
         GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.copperAxe, "CC ", " SC", " S ", 'C', "ingotCopper", 'S', "stickWood"));
