@@ -2,7 +2,6 @@ package com.samAndDan.modTest.config;
 
 import com.samAndDan.modTest.lib.Strings;
 import com.samAndDan.modTest.lib.Values;
-import com.samAndDan.modTest.utils.StringUtils;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
@@ -40,7 +39,7 @@ public class ModConfiguration {
 
     public static final String CATEGORY_NAME_GENERAL = "category_general";
     public static final String CATEGORY_NAME_WORLD = "category_world";
-    public static final String CATEGORY_NAME_MATERIAL = StringUtils.localize("config.modtest.category.material.name");
+    public static final String CATEGORY_NAME_MATERIAL = "category_material";
     public static final String CATEGORY_NAME_OTHER = "category_other";
 
     public static void preInit() {
@@ -70,31 +69,43 @@ public class ModConfiguration {
         syncConfig(false, false);
     }
 
-    /**
-     * Synchronise the three copies of the data
-     * 1) loadConfigFromFile && readFieldsFromConfig -> initialise everything from the disk file
-     * 2) !loadConfigFromFile && readFieldsFromConfig --> copy everything from the config file (altered by GUI)
-     * 3) !loadConfigFromFile && !readFieldsFromConfig --> copy everything from the native fields
-     *
-     * @param loadConfigFromFile   if true, load the config field from the configuration file on disk
-     * @param readFieldsFromConfig if true, reload the member variables from the config field
-     */
-
     private static void syncConfig(boolean loadConfigFromFile, boolean readFieldsFromConfig) {
         if (loadConfigFromFile) {
             config.load();
         }
 
-        Property propertyRubyDurability = config.get(CATEGORY_NAME_MATERIAL, StringUtils.localize("config.modtest.rubyDurability.name"), Values.RUBY_DURABILITY_DEFAULT,
-                StringUtils.localize("config.modtest.rubyDurability.comment"), Values.RUBY_DURABILITY_MIN, Values.RUBY_DURABILITY_MAX);
+        Property propertyRubyDurability = config.get(CATEGORY_NAME_MATERIAL, "Ruby Durability", Values.RUBY_DURABILITY_DEFAULT,
+                "Set the durability of Ruby tools. [" + Values.RUBY_DURABILITY_MIN + " ~ " + Values.RUBY_DURABILITY_MAX + "] Default: " + Values.RUBY_DURABILITY_DEFAULT, Values.RUBY_DURABILITY_MIN, Values.RUBY_DURABILITY_MAX);
+        propertyRubyDurability.setLanguageKey("gui.modtest.propertyRubyDurability");
 
-        Property propertyRubySpeed = config.get(CATEGORY_NAME_MATERIAL, StringUtils.localize("config.modtest.rubySpeed.name"), Values.RUBY_SPEED_DEFAUlT,
-                StringUtils.localize("config.modtest.rubySpeed.comment"), Values.RUBY_SPEED_MIN, Values.RUBY_SPEED_MAX);
+        Property propertyRubySpeed = config.get(CATEGORY_NAME_MATERIAL, "Ruby Speed", Values.RUBY_SPEED_DEFAUlT,
+                "Set the speed of Ruby tools (negative). [" + Values.RUBY_SPEED_MIN + " ~ " + Values.RUBY_SPEED_MAX + "] Default: " + Values.RUBY_SPEED_DEFAUlT, Values.RUBY_SPEED_MIN, Values.RUBY_SPEED_MAX);
+        propertyRubySpeed.setLanguageKey("gui.modtest.propertyRubySpeed").setRequiresMcRestart(true);
 
-        List<String> propOrderGeneral = new ArrayList<String>();
-        propOrderGeneral.add(propertyRubyDurability.getName());
-        propOrderGeneral.add(propertyRubySpeed.getName());
-        config.setCategoryPropertyOrder(CATEGORY_NAME_MATERIAL, propOrderGeneral);
+        Property propertyTitaniumDurability = config.get(CATEGORY_NAME_MATERIAL, "Titanium Durability", Values.TITANIUM_DURABILITY_DEFAULT,
+                "Set the durability of Titanium tools. [" + Values.TITANIUM_DURABILITY_MIN + " ~ " + Values.TITANIUM_DURABILITY_MAX + "] Default: " + Values.TITANIUM_DURABILITY_DEFAULT, Values.TITANIUM_DURABILITY_MIN, Values.TITANIUM_DURABILITY_MAX);
+        propertyTitaniumDurability.setLanguageKey("gui.modtest.propertyTitaniumDurability");
+
+        Property propertyTitaniumSpeed = config.get(CATEGORY_NAME_MATERIAL, "Titanium Speed", Values.TITANIUM_SPEED_DEFAUlT,
+                "Set the speed of Titanium tools (negative). [" + Values.TITANIUM_SPEED_MIN + " ~ " + Values.TITANIUM_SPEED_MAX + "] Default: " + Values.TITANIUM_SPEED_DEFAUlT, Values.TITANIUM_SPEED_MIN, Values.TITANIUM_SPEED_MAX);
+        propertyTitaniumSpeed.setLanguageKey("gui.modtest.propertyTitaniumSpeed").setRequiresMcRestart(true);
+
+        Property propertyCopperDurability = config.get(CATEGORY_NAME_MATERIAL, "Copper Durability", Values.COPPER_DURABILITY_DEFAULT,
+                "Set the durability of Copper tools. [" + Values.COPPER_DURABILITY_MIN + " ~ " + Values.COPPER_DURABILITY_MAX + "] Default: " + Values.COPPER_DURABILITY_DEFAULT, Values.COPPER_DURABILITY_MIN, Values.COPPER_DURABILITY_MAX);
+        propertyCopperDurability.setLanguageKey("gui.modtest.propertyCopperDurability");
+
+        Property propertyCopperSpeed = config.get(CATEGORY_NAME_MATERIAL, "Copper Speed", Values.COPPER_SPEED_DEFAUlT,
+                "Set the speed of Copper tools (negative). [" + Values.COPPER_SPEED_MIN + " ~ " + Values.COPPER_SPEED_MAX + "] Default: " + Values.COPPER_SPEED_DEFAUlT, Values.COPPER_SPEED_MIN, Values.COPPER_SPEED_MAX);
+        propertyCopperSpeed.setLanguageKey("gui.modtest.propertyCopperSpeed").setRequiresMcRestart(true);
+
+        List<String> propOrderMaterial = new ArrayList<String>();
+        propOrderMaterial.add(propertyRubyDurability.getName());
+        propOrderMaterial.add(propertyRubySpeed.getName());
+        propOrderMaterial.add(propertyTitaniumDurability.getName());
+        propOrderMaterial.add(propertyTitaniumSpeed.getName());
+        propOrderMaterial.add(propertyCopperDurability.getName());
+        propOrderMaterial.add(propertyCopperSpeed.getName());
+        config.setCategoryPropertyOrder(CATEGORY_NAME_MATERIAL, propOrderMaterial);
 
 
         if (readFieldsFromConfig) {
@@ -102,17 +113,36 @@ public class ModConfiguration {
             if (rubyDurability > Values.RUBY_DURABILITY_MAX || rubyDurability < Values.RUBY_DURABILITY_MIN) {
                 rubyDurability = Values.RUBY_DURABILITY_DEFAULT;
             }
-            rubySpeed = (float) propertyRubyDurability.getDouble(Values.RUBY_SPEED_DEFAUlT);
+            rubySpeed = (float) propertyRubySpeed.getDouble(Values.RUBY_SPEED_DEFAUlT);
             if (rubySpeed > Values.RUBY_SPEED_MAX || rubySpeed < Values.RUBY_SPEED_MIN) {
                 rubySpeed = Values.RUBY_SPEED_DEFAUlT;
+            }
+            titaniumDurability = propertyTitaniumDurability.getInt(Values.TITANIUM_DURABILITY_DEFAULT);
+            if (titaniumDurability > Values.TITANIUM_DURABILITY_MAX || titaniumDurability < Values.TITANIUM_DURABILITY_MIN) {
+                titaniumDurability = Values.TITANIUM_DURABILITY_DEFAULT;
+            }
+            titaniumSpeed = (float) propertyTitaniumSpeed.getDouble(Values.TITANIUM_SPEED_DEFAUlT);
+            if (titaniumSpeed > Values.TITANIUM_SPEED_MAX || titaniumSpeed < Values.TITANIUM_SPEED_MIN) {
+                titaniumSpeed = Values.TITANIUM_SPEED_DEFAUlT;
+            }
+            copperDurability = propertyRubyDurability.getInt(Values.COPPER_DURABILITY_DEFAULT);
+            if (copperDurability > Values.COPPER_DURABILITY_MAX || copperDurability < Values.COPPER_SPEED_MIN) {
+                copperDurability = Values.COPPER_DURABILITY_DEFAULT;
+            }
+            copperSpeed = (float) propertyCopperSpeed.getDouble(Values.COPPER_SPEED_DEFAUlT);
+            if (copperSpeed > Values.COPPER_SPEED_MAX || copperSpeed < Values.COPPER_SPEED_MIN) {
+                copperSpeed = Values.COPPER_SPEED_DEFAUlT;
             }
 
 
         }
 
-
         propertyRubyDurability.set(rubyDurability);
-
+        propertyRubySpeed.set(rubySpeed);
+        propertyTitaniumDurability.set(titaniumDurability);
+        propertyTitaniumSpeed.set(titaniumSpeed);
+        propertyCopperDurability.set(copperDurability);
+        propertyCopperSpeed.set(copperSpeed);
 
         if (config.hasChanged()) {
             config.save();
@@ -125,10 +155,9 @@ public class ModConfiguration {
 
         @SubscribeEvent(priority = EventPriority.NORMAL)
         public void onEvent(ConfigChangedEvent.OnConfigChangedEvent event) {
-            if (Strings.MODID.equals(event.getModID())
-                    && !event.isWorldRunning()) {
-                if (event.getConfigID().equals(CATEGORY_NAME_GENERAL)
-                        || event.getConfigID().equals(CATEGORY_NAME_OTHER)) {
+            if (Strings.MODID.equals(event.getModID()) && !event.isWorldRunning()) {
+                if (event.getConfigID().equals(CATEGORY_NAME_GENERAL) || event.getConfigID().equals(CATEGORY_NAME_OTHER)
+                        || event.getConfigID().equals(CATEGORY_NAME_MATERIAL) || event.getConfigID().equals(CATEGORY_NAME_WORLD)) {
                     syncFromGUI();
                 }
             }

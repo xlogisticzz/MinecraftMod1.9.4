@@ -36,8 +36,8 @@ public class ModItems {
     public static ItemModSpade tinSpade;
 
     public static Item.ToolMaterial materialRuby = EnumHelper.addToolMaterial("ruby", 3, ModConfiguration.rubyDurability, 5.5F, 7.5F, 40);
-    public static Item.ToolMaterial materialTitanium = EnumHelper.addToolMaterial("titanium", 4, Values.TITANIUM_DURABILITY, 6.1F, 8.5F, 30);
-    public static Item.ToolMaterial materialCopper = EnumHelper.addToolMaterial("copper", 3, Values.COPPER_DURABILITY, 3F, 5F, 30);
+    public static Item.ToolMaterial materialTitanium = EnumHelper.addToolMaterial("titanium", 4, ModConfiguration.titaniumDurability, 6.1F, 8.5F, 30);
+    public static Item.ToolMaterial materialCopper = EnumHelper.addToolMaterial("copper", 3, ModConfiguration.copperDurability, 3F, 5F, 30);
     public static Item.ToolMaterial materialTin = EnumHelper.addToolMaterial("tin", 3, Values.TIN_DURABILITY, 3F, 5F, 30);
 
     public static void createItems() {
@@ -48,8 +48,8 @@ public class ModItems {
         tinIngot = new ItemBasicItem(Strings.TININGOT);
         //axes
         rubyAxe = new ItemModAxe(materialRuby, Strings.RUBYAXE, ModConfiguration.rubySpeed);
-        titaniumAxe = new ItemModAxe(materialTitanium, Strings.TITANIUMAXE, Values.TITANIUM_SPEED);
-        copperAxe = new ItemModAxe(materialCopper, Strings.COPPERAXE, Values.COPPER_SPEED);
+        titaniumAxe = new ItemModAxe(materialTitanium, Strings.TITANIUMAXE, ModConfiguration.titaniumSpeed);
+        copperAxe = new ItemModAxe(materialCopper, Strings.COPPERAXE, ModConfiguration.copperSpeed);
         tinAxe = new ItemModAxe(materialTin, Strings.TINAXE, Values.TIN_SPEED);
         //swords
         rubySword = new ItemModSword(materialRuby, Strings.RUBYSWORD);

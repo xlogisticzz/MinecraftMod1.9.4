@@ -1,8 +1,5 @@
 itemGroup.tabMod=Test Mod
 
-config.modtest.category.material.name=Material Properties
-config.modtest.rubyDurability.comment=Durability of Ruby tools [100 - 10000]
-config.modtest.rubyDurability.name=Ruby Durability
 
 gui.modtest.material=Material Config
 gui.modtest.material.tooltip=Material Config options
