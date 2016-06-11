@@ -21,8 +21,8 @@ public class ModBlocks {
     public static ModBlock rubyBlock;
     public static ModBlock titaniumBlock;
     public static ModBlock copperBlock;
-    public static BlockSlab titaniumSlab;
-    public static BlockSlab titaniumDoubleSlab;
+    public static BlockTitaniumSlab titaniumSlab;
+    public static BlockTitaniumSlab titaniumDoubleSlab;
 
 
 
@@ -34,8 +34,8 @@ public class ModBlocks {
         titaniumBlock = new BlockBasicBlock(Material.IRON, Strings.TITANIUMBLOCK, 5F, 7F);
         copperBlock = new BlockBasicBlock(Material.IRON, Strings.COPPERBLOCK, 2F, 5F);
 
-        titaniumSlab = (BlockSlab) (new BlockTitaniumSlab.Half()).setHardness(2.0F).setResistance(10.0F).setUnlocalizedName(Strings.TITANIUMSLAB).setRegistryName(Strings.MODID, Strings.TITANIUMSLAB).setCreativeTab(ModCreativeTab.tabMod);
-        titaniumDoubleSlab = (BlockSlab) (new BlockTitaniumSlab.Double()).setHardness(2.0F).setResistance(10.0F).setUnlocalizedName(Strings.TITANIUMSLABUPPER).setRegistryName(Strings.MODID, Strings.TITANIUMSLABUPPER);
+        titaniumSlab = (BlockTitaniumSlab) (new BlockTitaniumSlab.Half()).setHardness(2.0F).setResistance(10.0F).setUnlocalizedName(Strings.TITANIUMSLAB).setRegistryName(Strings.MODID, Strings.TITANIUMSLAB).setCreativeTab(ModCreativeTab.tabMod);
+        titaniumDoubleSlab = (BlockTitaniumSlab) (new BlockTitaniumSlab.Double()).setHardness(2.0F).setResistance(10.0F).setUnlocalizedName(Strings.TITANIUMSLABUPPER).setRegistryName(Strings.MODID, Strings.TITANIUMSLABUPPER);
 
         registerBlock(rubyOre);
         registerBlock(titaniumOre);

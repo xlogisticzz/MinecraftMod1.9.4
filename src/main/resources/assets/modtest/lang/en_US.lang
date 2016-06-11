@@ -15,6 +15,7 @@ tile.modtest:rubyOre.name=Ruby Ore
 tile.modtest:rubyBlock.name=Ruby Block
 tile.modtest:titaniumOre.name=Titanium Ore
 tile.modtest:titaniumBlock.name=Titanium Block
+tile.modtest:titaniumBlockSlab.name=Titanium Slab
 tile.modtest:copperOre.name=Copper Ore
 tile.modtest:copperBlock.name=Copper Block
 
