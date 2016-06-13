@@ -1,6 +1,8 @@
 package com.samAndDan.modTest.block;
 
+import com.samAndDan.modTest.ModCreativeTab;
 import com.samAndDan.modTest.init.ModBlocks;
+import com.samAndDan.modTest.lib.Strings;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
@@ -11,9 +13,6 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-/**
- * Created by Sam on 11/06/2016.
- */
 public abstract class BlockTinSlab extends ModBlockSlab {
 
     public BlockTinSlab(){
@@ -34,13 +33,24 @@ public abstract class BlockTinSlab extends ModBlockSlab {
         return new ItemStack(ModBlocks.tinSlab);
     }
 
-    public static class Double extends BlockTitaniumSlab {
+    public static class Double extends BlockTinSlab {
+        public Double() {
+            setUnlocalizedName(Strings.TIN_SLAB_DOUBLE);
+            setRegistryName(Strings.MODID, Strings.TIN_SLAB_DOUBLE);
+        }
+
         public boolean isDouble() {
             return true;
         }
     }
 
-    public static class Half extends BlockTitaniumSlab {
+    public static class Half extends BlockTinSlab {
+        public Half() {
+            setUnlocalizedName(Strings.TIN_SLAB);
+            setRegistryName(Strings.MODID, Strings.TIN_SLAB);
+            setCreativeTab(ModCreativeTab.tabMod);
+        }
+
         public boolean isDouble() {
             return false;
         }

@@ -1,6 +1,5 @@
 package com.samAndDan.modTest.init;
 
-import com.samAndDan.modTest.ModCreativeTab;
 import com.samAndDan.modTest.block.*;
 import com.samAndDan.modTest.lib.Strings;
 import net.minecraft.block.Block;
@@ -30,24 +29,26 @@ public class ModBlocks {
 
 
 
-    public static void createBlocks() {
-        rubyOre = new BlockModOre(Strings.RUBYORE, 3F, 5F);
-        titaniumOre = new BlockModOre(Strings.TITANIUMORE, 4F, 5F);
-        copperOre = new BlockModOre(Strings.COPPERORE, 2F, 5F);
-        tinOre = new BlockModOre(Strings.TINORE, 3F, 5F);
-        rubyBlock = new BlockBasicBlock(Material.IRON, Strings.RUBYBLOCK, 3F, 5F);
-        titaniumBlock = new BlockBasicBlock(Material.IRON, Strings.TITANIUMBLOCK, 5F, 7F);
-        copperBlock = new BlockBasicBlock(Material.IRON, Strings.COPPERBLOCK, 2F, 5F);
-        tinBlock = new BlockBasicBlock(Material.IRON, Strings.TINBLOCK, 3F, 5F);
 
-        titaniumSlab = (ModBlockSlab) (new BlockTitaniumSlab.Half()).setHardness(2.0F).setResistance(10.0F).setUnlocalizedName(Strings.TITANIUMSLAB).setRegistryName(Strings.MODID, Strings.TITANIUMSLAB).setCreativeTab(ModCreativeTab.tabMod);
-        titaniumDoubleSlab = (ModBlockSlab) (new BlockTitaniumSlab.Double()).setHardness(2.0F).setResistance(10.0F).setUnlocalizedName(Strings.TITANIUMSLABUPPER).setRegistryName(Strings.MODID, Strings.TITANIUMSLABUPPER);
-        copperSlab = (ModBlockSlab) (new BlockCopperSlab.Half()).setHardness(2.0F).setResistance(10.0F).setUnlocalizedName(Strings.COPPERSLAB).setRegistryName(Strings.MODID, Strings.COPPERSLAB).setCreativeTab(ModCreativeTab.tabMod);
-        copperDoubleSlab = (ModBlockSlab) (new BlockCopperSlab.Double()).setHardness(2.0F).setResistance(10.0F).setUnlocalizedName(Strings.COPPERSLABUPPER).setRegistryName(Strings.MODID, Strings.COPPERSLABUPPER);
-        tinSlab = (ModBlockSlab) (new BlockTinSlab.Half()).setHardness(2.0F).setResistance(10.0F).setUnlocalizedName(Strings.TINSLAB).setRegistryName(Strings.MODID, Strings.TINSLAB).setCreativeTab(ModCreativeTab.tabMod);
-        tinDoubleSlab = (ModBlockSlab) (new BlockTinSlab.Double()).setHardness(2.0F).setResistance(10.0F).setUnlocalizedName(Strings.TINSLABUPPER).setRegistryName(Strings.MODID, Strings.TINSLABUPPER);
-        rubySlab = (ModBlockSlab) (new BlockRubySlab.Half()).setHardness(2.0F).setResistance(10.0F).setUnlocalizedName(Strings.RUBYSLAB).setRegistryName(Strings.MODID, Strings.RUBYSLAB).setCreativeTab(ModCreativeTab.tabMod);
-        rubyDoubleSlab = (ModBlockSlab) (new BlockRubySlab.Double()).setHardness(2.0F).setResistance(10.0F).setUnlocalizedName(Strings.RUBYSLABUPPER).setRegistryName(Strings.MODID, Strings.RUBYSLABUPPER);
+    public static void createBlocks() {
+        rubyOre = new BlockModOre(Strings.RUBY_ORE, 3F, 5F);
+        titaniumOre = new BlockModOre(Strings.TITANIUM_ORE, 4F, 5F);
+        copperOre = new BlockModOre(Strings.COPPER_ORE, 2F, 5F);
+        tinOre = new BlockModOre(Strings.TIN_ORE, 3F, 5F);
+        rubyBlock = new BlockBasicBlock(Material.IRON, Strings.RUBY_BLOCK, 3F, 5F);
+        titaniumBlock = new BlockBasicBlock(Material.IRON, Strings.TITANIUM_BLOCK, 5F, 7F);
+        copperBlock = new BlockBasicBlock(Material.IRON, Strings.COPPER_BLOCK, 2F, 5F);
+        tinBlock = new BlockBasicBlock(Material.IRON, Strings.TIN_BLOCK, 3F, 5F);
+
+        titaniumSlab = new BlockTitaniumSlab.Half();
+        titaniumDoubleSlab = new BlockTitaniumSlab.Double();
+        copperSlab = new BlockCopperSlab.Half();
+        copperDoubleSlab = new BlockCopperSlab.Double();
+        tinSlab = new BlockTinSlab.Half();
+        tinDoubleSlab = new BlockTinSlab.Double();
+        rubySlab = new BlockRubySlab.Half();
+        rubyDoubleSlab = new BlockRubySlab.Double();
+
 
 
         registerBlock(rubyOre);
@@ -66,7 +67,6 @@ public class ModBlocks {
         registerBlock(tinDoubleSlab);
         registerBlockWithItem(rubySlab, new ItemSlab(rubySlab, rubySlab, rubyDoubleSlab));
         registerBlock(rubyDoubleSlab);
-
 
 
     }

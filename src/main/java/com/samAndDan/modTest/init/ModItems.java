@@ -43,34 +43,34 @@ public class ModItems {
     public static void createItems() {
         //ingots etc
         ruby = new ItemBasicItem(Strings.RUBY);
-        titaniumIngot = new ItemBasicItem(Strings.TITANIUMINGOT);
-        copperIngot = new ItemBasicItem(Strings.COPPERINGOT);
-        tinIngot = new ItemBasicItem(Strings.TININGOT);
+        titaniumIngot = new ItemBasicItem(Strings.TITANIUM_INGOT);
+        copperIngot = new ItemBasicItem(Strings.COPPER_INGOT);
+        tinIngot = new ItemBasicItem(Strings.TIN_INGOT);
         //axes
-        rubyAxe = new ItemModAxe(materialRuby, Strings.RUBYAXE, ModConfiguration.rubySpeed);
-        titaniumAxe = new ItemModAxe(materialTitanium, Strings.TITANIUMAXE, ModConfiguration.titaniumSpeed);
-        copperAxe = new ItemModAxe(materialCopper, Strings.COPPERAXE, ModConfiguration.copperSpeed);
-        tinAxe = new ItemModAxe(materialTin, Strings.TINAXE, Values.TIN_SPEED);
+        rubyAxe = new ItemModAxe(materialRuby, Strings.RUBY_AXE, ModConfiguration.rubySpeed);
+        titaniumAxe = new ItemModAxe(materialTitanium, Strings.TITANIUM_AXE, ModConfiguration.titaniumSpeed);
+        copperAxe = new ItemModAxe(materialCopper, Strings.COPPER_AXE, ModConfiguration.copperSpeed);
+        tinAxe = new ItemModAxe(materialTin, Strings.TIN_AXE, Values.TIN_SPEED);
         //swords
-        rubySword = new ItemModSword(materialRuby, Strings.RUBYSWORD);
-        titaniumSword = new ItemModSword(materialTitanium, Strings.TITANIUMSWORD);
-        copperSword = new ItemModSword(materialCopper, Strings.COPPERSWORD);
-        tinSword = new ItemModSword(materialTin, Strings.TINSWORD);
+        rubySword = new ItemModSword(materialRuby, Strings.RUBY_SWORD);
+        titaniumSword = new ItemModSword(materialTitanium, Strings.TITANIUM_SWORD);
+        copperSword = new ItemModSword(materialCopper, Strings.COPPER_SWORD);
+        tinSword = new ItemModSword(materialTin, Strings.TIN_SWORD);
         //hoes
-        rubyHoe = new ItemModHoe(materialRuby, Strings.RUBYHOE);
-        titaniumHoe = new ItemModHoe(materialTitanium, Strings.TITANIUMHOE);
-        copperHoe = new ItemModHoe(materialCopper, Strings.COPPERHOE);
-        tinHoe = new ItemModHoe(materialTin, Strings.TINHOE);
+        rubyHoe = new ItemModHoe(materialRuby, Strings.RUBY_HOE);
+        titaniumHoe = new ItemModHoe(materialTitanium, Strings.TITANIUM_HOE);
+        copperHoe = new ItemModHoe(materialCopper, Strings.COPPER_HOE);
+        tinHoe = new ItemModHoe(materialTin, Strings.TIN_HOE);
         //picks
-        rubyPick = new ItemModPick(materialRuby, Strings.RUBYPICKAXE);
-        titaniumPick = new ItemModPick(materialTitanium, Strings.TITANIUMPICKAXE);
-        copperPick = new ItemModPick(materialCopper, Strings.COPPERPICKAXE);
-        tinPick = new ItemModPick(materialTin, Strings.TINPICKAXE);
+        rubyPick = new ItemModPick(materialRuby, Strings.RUBY_PICKAXE);
+        titaniumPick = new ItemModPick(materialTitanium, Strings.TITANIUM_PICKAXE);
+        copperPick = new ItemModPick(materialCopper, Strings.COPPER_PICKAXE);
+        tinPick = new ItemModPick(materialTin, Strings.TIN_PICKAXE);
         //spades
-        rubySpade = new ItemModSpade(materialRuby, Strings.RUBYSPADE);
-        titaniumSpade = new ItemModSpade(materialTitanium, Strings.TITANIUMSPADE);
-        copperSpade = new ItemModSpade(materialCopper, Strings.COPPERSPADE);
-        tinSpade = new ItemModSpade(materialTin, Strings.TINSPADE);
+        rubySpade = new ItemModSpade(materialRuby, Strings.RUBY_SPADE);
+        titaniumSpade = new ItemModSpade(materialTitanium, Strings.TITANIUM_SPADE);
+        copperSpade = new ItemModSpade(materialCopper, Strings.COPPER_SPADE);
+        tinSpade = new ItemModSpade(materialTin, Strings.TIN_SPADE);
 
         //register items
 

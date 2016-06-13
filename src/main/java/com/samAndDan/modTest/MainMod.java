@@ -14,13 +14,13 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(name = Strings.NAME, modid = Strings.MODID, version = Strings.VERSION, guiFactory = Strings.GUIFACTORY)
+@Mod(name = Strings.NAME, modid = Strings.MODID, version = Strings.VERSION, guiFactory = Strings.GUI_FACTORY)
 public class MainMod {
 
     @Mod.Instance(Strings.MODID)
     public static MainMod instance;
 
-    @SidedProxy(clientSide = Strings.CLIENTPROXY, serverSide = Strings.COMMONPROXY)
+    @SidedProxy(clientSide = Strings.CLIENT_PROXY, serverSide = Strings.COMMON_PROXY)
     public static CommonProxy proxy;
 
     @Mod.EventHandler
