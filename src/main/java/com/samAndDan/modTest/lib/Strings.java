@@ -55,7 +55,9 @@ public class Strings {
     public static final String TIN_SLAB_DOUBLE = "tinBlockDoubleSlab";
     public static final String RUBY_SLAB = "rubyBlockSlab";
     public static final String RUBY_SLAB_DOUBLE = "rubyBlockDoubleSlab";
+    public static final String MOD_CHEST = "modChest";
 
 
+    public static final String TILE_MOD_CHEST = "tileModChest";
 
 }

@@ -2,6 +2,7 @@ package com.samAndDan.modTest.init;
 
 import com.samAndDan.modTest.block.*;
 import com.samAndDan.modTest.lib.Strings;
+import com.samAndDan.modTest.tileEntities.TileEntityModChest;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
@@ -26,6 +27,7 @@ public class ModBlocks {
     public static ModBlockSlab tinDoubleSlab;
     public static ModBlockSlab rubySlab;
     public static ModBlockSlab rubyDoubleSlab;
+    public static ModBlock modChest;
 
 
 
@@ -39,6 +41,7 @@ public class ModBlocks {
         titaniumBlock = new BlockBasicBlock(Material.IRON, Strings.TITANIUM_BLOCK, 5F, 7F);
         copperBlock = new BlockBasicBlock(Material.IRON, Strings.COPPER_BLOCK, 2F, 5F);
         tinBlock = new BlockBasicBlock(Material.IRON, Strings.TIN_BLOCK, 3F, 5F);
+        modChest = new BlockModChest(Material.ROCK, Strings.MOD_CHEST);
 
         titaniumSlab = new BlockTitaniumSlab.Half();
         titaniumDoubleSlab = new BlockTitaniumSlab.Double();
@@ -67,6 +70,10 @@ public class ModBlocks {
         registerBlock(tinDoubleSlab);
         registerBlockWithItem(rubySlab, new ItemSlab(rubySlab, rubySlab, rubyDoubleSlab));
         registerBlock(rubyDoubleSlab);
+
+        registerBlock(modChest);
+
+        GameRegistry.registerTileEntity(TileEntityModChest.class, Strings.TILE_MOD_CHEST);
 
 
     }
